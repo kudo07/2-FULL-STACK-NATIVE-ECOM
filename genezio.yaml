@@ -18,7 +18,7 @@ backend:
   # Information about the backend's functions.
   functions:
     # The name (label) of the function.
-    - name: ecom-express-api-function
+    - name: ecom-express
       # The path to the function's code.
       path: ./
       # The name of the function handler

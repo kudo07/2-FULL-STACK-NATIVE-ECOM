@@ -15,11 +15,17 @@ const port = 3000;
 
 app.use('/products', productRoutes);
 app.use('/auth', authRoutes);
-// the next part is continuation
-// if (process.env.NODE_ENV === 'dev') {
-// }
-// export const handler = serverless(app);
-
-app.listen(port, () => {
-  console.log(`Example app listening on portss ${port}`);
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
+
+// the next part is continuation
+if (process.env.NODE_ENV === 'dev') {
+  app.listen(port, () => {
+    console.log(`Example app listening on portss ${port}`);
+  });
+}
+export const handler = serverless(app);
+// app.listen(port, () => {
+//   console.log(`Example app listening on portss ${port}`);
+// });

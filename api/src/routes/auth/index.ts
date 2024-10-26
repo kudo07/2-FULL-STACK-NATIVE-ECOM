@@ -36,8 +36,8 @@ router.post('/register', validateDate(createUserSchema), async (req, res) => {
     const token = generateUserToken(user);
 
     res.status(201).json({ user, token });
-  } catch (error) {
-    res.status(500).send('Something');
+  } catch (error: any) {
+    res.status(500).send(error.message);
   }
 });
 
