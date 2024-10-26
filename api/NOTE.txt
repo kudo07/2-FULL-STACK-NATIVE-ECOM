@@ -1,0 +1,45 @@
+ROUTES==>
+PRODUCTS
+    PRODUCTSCHEMA.TS , PRODUCTCONTROLLER.TS
+    1.GET ALL THE PRODUCTS 
+
+    http://localhost:3000/products/ 
+
+    2. GET THE PRODUCT BY ID
+    
+    http://localhost:3000/products/5
+
+    3. POST THE PRODUCT
+        http://localhost:3000/products/
+        A.{
+            "name":"iphone",
+            "price":"312312"
+        } 
+
+
+    4.  DELETE 
+        http://localhost:3000/products/3
+        
+
+    5. PUT 
+    {
+    "name":"UPDATED",
+    "price":"404"
+    }
+        http://localhost:3000/products/3432
+
+2. AUTH
+    A. login   
+        POST http://localhost:3000/auth/login
+        {
+    "email":"rewgewrfgreWFWFFWERGFwgfr",
+    "password":"frewfgw"
+
+        }
+    B. REGISTER
+        POST http://localhost:3000/auth/register
+        {
+            "email":"rewgewrfgreWFWFFWERGFwgfr",
+            "password":"frewfgw"
+
+        }
