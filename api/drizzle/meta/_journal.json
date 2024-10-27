@@ -36,6 +36,20 @@
       "when": 1729766730511,
       "tag": "0004_dark_satana",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1730041468442,
+      "tag": "0005_supreme_rage",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1730048409062,
+      "tag": "0006_public_thor_girl",
+      "breakpoints": true
     }
   ]
 }

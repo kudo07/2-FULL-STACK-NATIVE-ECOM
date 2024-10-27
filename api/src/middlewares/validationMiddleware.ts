@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { z, ZodError, ZodObject } from 'zod';
+import { z, ZodError } from 'zod';
 import _ from 'lodash';
 export function validateDate(schema: z.ZodObject<any, any>) {
   return (req: Request, res: Response, next: NextFunction) => {

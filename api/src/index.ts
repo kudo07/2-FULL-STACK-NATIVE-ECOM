@@ -2,6 +2,7 @@ import express, { json, urlencoded } from 'express';
 import productRoutes from './routes/products/index.js';
 import serverless from 'serverless-http';
 import authRoutes from './routes/auth/index.js';
+import ordersRoutes from './routes/orders/index.js';
 // you can import it as any namec,f here
 const app = express();
 app.use(json());
@@ -15,6 +16,7 @@ const port = 3000;
 
 app.use('/products', productRoutes);
 app.use('/auth', authRoutes);
+app.use('/orders', ordersRoutes);
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
