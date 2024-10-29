@@ -65,4 +65,40 @@ PRODUCTS
         GET REQUESTS http://localhost:3000/orders
 
     c. GET ORDER BY ID 
-        GET REQUEST 
+        GET REQUEST  http://localhost:3000/orders/5 
+      LOOGED IN GETORDER IN CONTROLLER FUNCTION  ORDERwITHiTEMS [
+                      {
+                        orders: {
+                          id: 5,
+                          createdAt: 2024-10-29T05:58:55.192Z,
+                          status: 'New',
+                          userId: 1,
+                          stripePaymentIntentId: null
+                        },
+                        order_items: { id: 9, orderId: 5, productId: 2, quantity: 1, price: 100 } 
+                      },
+                      {
+                        orders: {
+                          id: 5,
+                          createdAt: 2024-10-29T05:58:55.192Z,
+                          status: 'New',
+                          userId: 1,
+                          stripePaymentIntentId: null
+                        },
+                        order_items: { id: 10, orderId: 5, productId: 3, quantity: 2, price: 120 }
+                      }
+                        ]  
+                MERGE ORDER {
+                  id: 5,
+                  createdAt: 2024-10-29T05:58:55.192Z,
+                  status: 'New',
+                  userId: 1,
+                  stripePaymentIntentId: null,
+                  items: [
+                    { id: 9, orderId: 5, productId: 2, quantity: 1, price: 100 },
+                    { id: 10, orderId: 5, productId: 3, quantity: 2, price: 120 }
+                  ]
+                }
+    D. UPDATE ORDER 
+        
+                
