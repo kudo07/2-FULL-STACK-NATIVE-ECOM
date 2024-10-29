@@ -5,7 +5,7 @@ import {
   insertOrderItemSchema,
   insertOrderWithItemsSchema,
 } from '../../db/ordersSchema.js';
-import { createrOrder } from './orderController.js';
+import { createrOrder, listOrders } from './orderController.js';
 
 const router = Router();
 router.post(
@@ -15,4 +15,6 @@ router.post(
   validateDate(insertOrderWithItemsSchema),
   createrOrder
 );
+
+router.get('/', verifyToken, listOrders);
 export default router;

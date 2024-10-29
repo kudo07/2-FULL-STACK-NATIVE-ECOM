@@ -42,3 +42,12 @@ export async function createrOrder(req: Request, res: Response) {
     res.status(400).json({ message: 'Invalid order data' });
   }
 }
+
+export async function listOrders(req: Request, res: Response) {
+  try {
+    const orders = await db.select().from(ordersTable);
+    res.json(orders);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+}

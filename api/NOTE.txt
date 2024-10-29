@@ -43,3 +43,26 @@ PRODUCTS
             "password":"frewfgw"
 
         }
+3. ORDERS
+    A. CREATE ORDERS 
+        1. POST http://localhost:3000/orders
+
+            {
+                "order":{},
+                "items":[{
+                    "productId":2,
+                    "quantity":1,
+                    "price":100
+                },
+                {
+                    "productId":3,
+                    "quantity":2,
+                    "price":120
+                }
+                ]
+            }
+    B. LIST ORDERS
+        GET REQUESTS http://localhost:3000/orders
+
+    c. GET ORDER BY ID 
+        GET REQUEST 
